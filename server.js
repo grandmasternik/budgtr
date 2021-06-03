@@ -6,8 +6,11 @@ const budget = require("./models/budget.js");
 const app = express();
 
 const port = 3000;
-        //ROUTES//
+        // Imports//
 
+const models = require('./models/budget.js')
+
+        //ROUTES//
 app.get("/bugets", (req, res)=>{
     res.send(budgets)
 });
