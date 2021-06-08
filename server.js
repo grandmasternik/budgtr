@@ -7,22 +7,22 @@ const port = 3000;
 const models = require('./models/budget.js')
 
         //index//
-app.get("/bugets", (req, res)=>{
+app.get("/buget", (req, res)=>{
     res.send(budgets)
 });
 
         //Show//
-app.get("/budgets/:index", (req, res)=>{
+app.get("/budget/:index", (req, res)=>{
     res.send(indexOfBudgets)
 });
 
         //New//
-app.get("/bugets/:new", (req, res)=>{
+app.get("/budget/:new", (req, res)=>{
     res.send(newBudgets)
 });
 
         //Create//
-app.post("/budgets", (req, res)=>{
+app.post("/budget", (req, res)=>{
     res.send()
 });
 
