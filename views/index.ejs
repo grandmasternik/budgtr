@@ -9,6 +9,42 @@
     <title>Index<title>
 
 <body>
+    <% let bankAccount = 0 %>
+    <div class="container">
+        <br>
+        <br>
     
+        <h1>Budgtr ALL</h1>
+            <button><a href="/budget/new">NEW EXPENSE</a></button>
+       
+            <table>
+                <% for(let i = 0; i < allBudget.length; i++) { %>
+                <tr>
+                <td><%=allBudget[i].date %></td>
+               
+                <td><a href="/budget/<%=i%>"><%=allBudget[i].name %></a></td>
+               
+                <td><%=allBudget[i].amount %></td>
+               
+                <% bankAccount = parseInt(allBudget[i].amount) + bankAccount%>
+                </tr>
+                <% } %>
+                <% if (bankAccount >= 1000) { %>
+            
+                <button type="button" class="btn btn-success">Success<%=bankAccount%></button>
+                
+                <%  } else if (bankAccount < 0) { %>
+
+                <button type="button" class="btn btn-danger">Danger<%=bankAccount%></button>
+            
+                <%} else {%>
+                
+                <button type="button" class="btn btn-warning">Warning<%=bankAccount%></button>
+             
+                <%}%>   
+            
+                <% console.log(allBudget) %>
+            </table>
+    </div>
 </body>
 </html>

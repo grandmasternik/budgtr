@@ -4,6 +4,9 @@ const app = express();
 const PORT = 3000;
 const budget = require("./models/budget.js");
 
+// static config//
+// app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + `/public`));
 
         //index//
 app.get("/budgets", (req, res)=>{
