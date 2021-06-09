@@ -6,24 +6,23 @@ const budget = require("./models/budget.js");
 
 
         //index//
-app.get("/budget", (req, res)=>{
+app.get("/budgets", (req, res)=>{
     res.send("/budget.ejs");
 });
 
         //Show//
-app.get("/budget/:index", (req, res)=>{
+app.get("/budgets/:index", (req, res)=>{
     res.send("index.ejs");
 });
 
         //New//
-app.get('/books/new', (req, res) => {
+app.get('/budgets/new', (req, res) => {
     res.render('new.ejs');
 });
         
         
-
         //Create//
-app.post("/budget", (req, res)=>{
+app.post("/budgets", (req, res)=>{
     res.send(req.body);
 });
 
