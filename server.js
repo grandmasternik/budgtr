@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const budget = require("./models/budget.js");
+const bodyParser = require(`body-parser`);
 
 // static config//
 // app.use(express.urlencoded({ extended: true }));

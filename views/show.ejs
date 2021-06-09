@@ -9,6 +9,40 @@
     <title>Show</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>budget.name</h1>
+        <button><a href="/budget">Back to Home</a></button>
+
+        <table>
+            <tr>
+                <th>date</th>
+                <td><%= budget.date%></td>
+            </tr>
+            
+            <tr>
+                <th>name</th>
+                <td><%= budget.name%></td>
+            </tr>
+            
+            <tr>
+                <th>from</th>
+                <td><%= budget.from%></td>
+            </tr>
+            
+            <tr>
+                <th>amount</th>
+                <td><%= budget.amount%></td>
+            </tr>
+            
+            <tr>
+                <th>tags</th>
+                <% for (let i = 0; i < budget.tags.length; i++) { %>
+                <td><%= budget.tags[i]%></td>
+               <%}%>
+            </tr>
+
+        </table>
+
+    </div>
 </body>
 </html>
