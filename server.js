@@ -1,32 +1,33 @@
     //Dependencies//
 const express = require('express');
-
-const budget = require("./models/budget.js");
 const app = express();
-const port = 3000;
-const models = require('./models/budget.js')
+const PORT = 3000;
+const budget = require("./models/budget.js");
+
 
         //index//
-app.get("/buget", (req, res)=>{
-    res.send(budgets)
+app.get("/budget", (req, res)=>{
+    res.send("/budget.ejs");
 });
 
         //Show//
 app.get("/budget/:index", (req, res)=>{
-    res.send(indexOfBudgets)
+    res.send("index.ejs");
 });
 
         //New//
-app.get("/budget/:new", (req, res)=>{
-    res.send(newBudgets)
+app.get('/books/new', (req, res) => {
+    res.render('new.ejs');
 });
+        
+        
 
         //Create//
 app.post("/budget", (req, res)=>{
-    res.send()
+    res.send(req.body);
 });
 
         //Web Server//
-app.listen(port, ()=>{
-    console.log("Express is listening on port ", port);
+app.listen(PORT, ()=>{
+    console.log(`Express is listening on port ${PORT}`);
 });
