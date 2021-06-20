@@ -13,12 +13,12 @@
         <h1>Budgtr</h1>
 
         <table>
-            <% for (var i = 0; i < allBudget.length; i++) { %>
+            <% for (var i = 0; i < budget.length; i++) { %>
              <tr>
-               <td><%= allBudget[i].date %></td>
+               <td><%= budget[i].date %></td>
                
-               <td><a href="/budget<%=i%>"><%=allBudget[i].name %></a></td>
-               <td><%= allBudget[i].amount %></td>
+               <td><a href="/budget<%=i%>"><%=budget[i].name %></a></td>
+               <td><%= budget[i].amount %></td>
              </tr>    
             <% } %> 
          </table> 

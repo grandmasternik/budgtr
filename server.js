@@ -18,11 +18,11 @@
     });        
 
     // Index
-    app.get('/budget', (req, res) => {
-        res.render('index.ejs', {
-            allBudget: budget
-        })
-    })
+    app.get('/budget', (req, res) => {    
+        res.render('index.ejs', { // tempalte, data object
+          budget: budget,
+      }) 
+      });
 
     //New//
     app.get('/budget/new', (req, res) => {
@@ -30,13 +30,13 @@
     });
 
     //Create//
-    app.post("/budget", (req, res) => {
+    app.post('/budget', (req, res) => {
         res.send(req.body);
     });
 
     //Show//
-    app.get("/budget/:index", (req, res) => {
-        res.send("index.ejs");
+    app.get('/budget/:index', (req, res) => {
+        res.send('index.ejs');
     });
 
     //Web Server//
