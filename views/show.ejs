@@ -9,40 +9,19 @@
     <title>Show</title>
 </head>
 <body>
+
     <div class="container">
-        <h1>budget.name</h1>
-        <button><a href="/budget">Back to Home</a></button>
+        <h1>Retirement</h1>
 
-        <table>
-            <tr>
-                <th>date</th>
-                <td><%= budget.date%></td>
-            </tr>
-            
-            <tr>
-                <th>name</th>
-                <td><%= budget.name%></td>
-            </tr>
-            
-            <tr>
-                <th>from</th>
-                <td><%= budget.from%></td>
-            </tr>
-            
-            <tr>
-                <th>amount</th>
-                <td><%= budget.amount%></td>
-            </tr>
-            
-            <tr>
-                <th>tags</th>
-                <% for (let i = 0; i < budget.tags.length; i++) { %>
-                <td><%= budget.tags[i]%></td>
-               <%}%>
-            </tr>
-
-        </table>
-
+        <form action="/budget">
+            <input type="submit" value="BACK" />
+        </form>
+        
+        <p>date</p><%= budget.date %> 
+        <p>name</p> <%= budget.name %> 
+        <p>from</p> <%= budget.from %> 
+        <p>amount</p> <%= budget.amount%> 
+        <p>tags</p> <%= budget.tags%> 
     </div>
 </body>
 </html>

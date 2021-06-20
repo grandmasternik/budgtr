@@ -71,4 +71,4 @@ const Budget = [
     },
   ];
 
-module.exports = Budget;
+module.exports = Budget
