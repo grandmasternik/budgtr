@@ -30,9 +30,10 @@
     });
 
     //Create//
-    app.post('/budget', (req, res) => {
-        res.send(req.body);
-    });
+    app.post('/budget', (req, res)=>{
+        budget.push(req.body);
+        res.redirect('/budget');
+      });
 
     //Show//
     app.get('/budget/:index', (req, res) => {
