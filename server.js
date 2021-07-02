@@ -36,9 +36,12 @@
       });
 
     //Show//
-    app.get('/budget/:index', (req, res) => {
-        res.send('index.ejs');
-    });
+   app.get('/budget/:index', (req, res) => {    
+        res.render('show.ejs', { // tempalte, data object
+          budget: budget[req.params.index],
+      }) 
+      });
+
 
     //Web Server//
     app.listen(PORT, () => {
